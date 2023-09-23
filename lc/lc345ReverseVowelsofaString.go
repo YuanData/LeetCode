@@ -16,22 +16,20 @@ func reverseVowels(inputString string) string {
 
 	// looping until the left pointer is less than the right pointer
 	for leftPointer < rightPointer {
-		// finding the index of the first vowel from the left
-		for leftPointer < rightPointer && !isVowel(runes[leftPointer]) {
+		if leftPointer < rightPointer && !isVowel(runes[leftPointer]) {
+			// finding the index of the first vowel from the left
 			leftPointer += 1
-		}
-		// finding the index of the first vowel from the right
-		for rightPointer > leftPointer && !isVowel(runes[rightPointer]) {
+		} else if rightPointer > leftPointer && !isVowel(runes[rightPointer]) {
+			// finding the index of the first vowel from the right
+			rightPointer -= 1
+		} else {
+			// swapping the vowels
+			runes[leftPointer], runes[rightPointer] = runes[rightPointer], runes[leftPointer]
+
+			// moving the pointers inward
+			leftPointer += 1
 			rightPointer -= 1
 		}
-
-		// swapping the vowels
-		runes[leftPointer], runes[rightPointer] = runes[rightPointer], runes[leftPointer]
-
-		// moving the pointers inward
-		leftPointer += 1
-		rightPointer -= 1
 	}
-	// converting the slice of runes back to a string
-	return string(runes)
+	return string(runes) // converting the slice of runes back to a string
 }
