@@ -4,13 +4,6 @@ import (
 	"testing"
 )
 
-func max(a, b float64) float64 {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func findMaxAverage(nums []int, k int) float64 {
 	var currSum int
 	maxSum := float64(-1 << 63) // equivalent to -infinity in float64
