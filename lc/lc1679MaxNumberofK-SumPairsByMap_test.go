@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func maxOperations(nums []int, k int) int {
+func maxOperationsMap(nums []int, k int) int {
 
 	// 初始化答案為0
 	ans := 0
@@ -48,7 +48,7 @@ func maxOperations(nums []int, k int) int {
 	return ans
 }
 
-func TestMaxOperations(t *testing.T) {
+func TestMaxOperationsMap(t *testing.T) {
 	tests := []struct {
 		nums []int
 		k    int
@@ -61,7 +61,7 @@ func TestMaxOperations(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		got := maxOperations(test.nums, test.k)
+		got := maxOperationsMap(test.nums, test.k)
 		if got != test.want {
 			t.Errorf("maxOperations(%v, %v) = %v; want %v", test.nums, test.k, got, test.want)
 		}
