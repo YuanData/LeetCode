@@ -17,3 +17,11 @@ func min[T constraints.Ordered](a, b T) T {
 		return b
 	}
 }
+
+func absIntG[T constraints.Integer](x T) T {
+	if x < T(0) {
+		return -x
+	} else {
+		return x
+	}
+}
