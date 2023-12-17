@@ -56,6 +56,16 @@ func processFiles(dirpath string) {
 		"窮舉":        "暴力",
 		"硬體":        "硬件",
 		"軟體":        "軟件",
+		"推入":        "壓棧",
+		"彈出":        "出棧|彈棧",
+		"堆頂":        "棧頂",
+		"堆底":        "棧底",
+		"堆疊":        "棧",
+		"佇列":        "隊列",
+		"雜湊":        "哈希",
+		"二元":        "二叉",
+		"巨量":        "海量",
+		"搜尋":        "搜索",
 	}
 
 	err := filepath.Walk(dirpath, func(path string, info os.FileInfo, err error) error {
