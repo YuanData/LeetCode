@@ -3,6 +3,7 @@ package lc
 func lenLongestSubStr(s string) int {
 
 	charMap := make(map[rune]int)
+	// sotres the last idx where char was last seen.
 
 	start, maxLen := 0, 0
 
